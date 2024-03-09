@@ -4,18 +4,7 @@
     gap: 40px;
     justify-content: space-between;
 }
-.productdisplay-left{
-    display: flex;
-    gap: 18px;
-}
-.productdisplay-img-list{
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-.productdisplay-img-list img{
-    height: 110px;
-}
+
 .productdisplay-main-img{
     height: 500px;
 }

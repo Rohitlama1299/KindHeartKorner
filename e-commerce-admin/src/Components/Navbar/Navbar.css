@@ -9,6 +9,12 @@
 }
 .nav-logo{
     width: 200px;
+    
+}
+.nav-logo p{
+    color: #171717;
+    font-size: 28px;
+    font-weight: 600;
 }
 .nav-profile{
     width: 75px;

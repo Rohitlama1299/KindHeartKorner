@@ -1,3 +1,4 @@
+import React from "react";
 import Navbar from "./Components/Navbar/Navbar";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Shop from "./Pages/Shop";
@@ -5,10 +6,13 @@ import Cart from "./Pages/Cart";
 import Product from "./Pages/Product";
 import Footer from "./Components/Footer/Footer";
 import ShopCategory from "./Pages/ShopCategory";
-import women_banner from "./Components/Assets/banner_women.png";
-import men_banner from "./Components/Assets/banner_mens.png";
-import kid_banner from "./Components/Assets/banner_kids.png";
+import banner_shop from "./Components/Assets/banner_shop.png";
 import LoginSignup from "./Pages/LoginSignup";
+import Contact from "./Pages/contact";
+import About from "./Pages/about";
+
+
+
 
 function App() {
 
@@ -18,9 +22,10 @@ function App() {
         <Navbar />
         <Routes>
           <Route path="/" element={<Shop gender="all" />} />
-          <Route path="/mens" element={<ShopCategory banner={men_banner} category="men" />} />
-          <Route path="/womens" element={<ShopCategory banner={women_banner} category="women" />} />
-          <Route path="/kids" element={<ShopCategory banner={kid_banner} category="kid" />} />
+          <Route path="/shop" element={<ShopCategory banner={banner_shop} category="shop" />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/contact" element={<Contact />} />
+
           <Route path='/product' element={<Product />}>
             <Route path=':productId' element={<Product />} />
           </Route>

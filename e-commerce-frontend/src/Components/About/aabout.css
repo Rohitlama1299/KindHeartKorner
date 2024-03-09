@@ -1,0 +1,95 @@
+:root {
+  --primary-color: #333;
+  --secondary-color: #f4f4f4;
+  --text-color: #555;
+  --font-size-base: 16px;
+ }
+ 
+ .about-us-container {
+  padding: 40px;
+  text-align: center;
+  margin: 100px 300px 100px 300px;
+  background-color: var(--secondary-color);
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+ }
+ 
+ .about-us-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+ }
+ 
+ .about-us-image {
+  flex: 1;
+ }
+ 
+ .about-us-image img {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+ }
+ 
+ .about-us-description {
+  flex: 2;
+  padding-left: 20px;
+ }
+ 
+ .about-us-description p {
+  margin-bottom: 20px;
+  font-size: var(--font-size-base);
+  color: var(--text-color);
+  line-height: 1.6;
+ }
+ 
+ /* Existing media query for tablets */
+ @media(max-width: 768px) {
+  .about-us-content {
+     flex-direction: column;
+     align-items: center;
+  }
+  .about-us-image img {
+     max-width: 90%;
+  }
+ }
+
+ @media (max-width: 768px) {
+  .about-us-container {
+    padding: 20px;
+    margin: 50px auto; /* Center the container horizontally */
+  }
+  
+  .about-us-image img {
+    max-width: 90%;
+  }
+  
+  .about-us-description {
+    padding-left: 10px;
+  }
+  
+  .about-us-description p {
+    font-size: 14px; /* Consider using rem or em for better scalability */
+  }
+}
+ 
+ /* Additional media queries for smaller devices */
+ @media(max-width: 480px) {
+  .about-us-container {
+     padding: 20px;
+     margin: 50px auto 50px;
+  }
+  .about-us-image img {
+     max-width: 80%;
+  }
+  .about-us-description {
+     padding-left: 10px;
+  }
+  .about-us-description p {
+     font-size: 14px; /* Consider using rem or em for better scalability */
+  }
+ }
+ 

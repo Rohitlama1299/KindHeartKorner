@@ -1,7 +1,7 @@
 import React, { useContext, useRef, useState } from 'react'
 import './Navbar.css'
 import { Link } from 'react-router-dom'
-import logo from '../Assets/logo.png'
+import logo from '../Assets/logos.png'
 import cart_icon from '../Assets/cart_icon.png'
 import { ShopContext } from '../../Context/ShopContext'
 import nav_dropdown from '../Assets/nav_dropdown.png'
@@ -22,14 +22,14 @@ const Navbar = () => {
     <div className='nav'>
       <Link to='/' onClick={()=>{setMenu("shop")}} style={{ textDecoration: 'none' }} className="nav-logo">
         <img src={logo} alt="logo" />
-        <p>SHOPPER</p>
+        <p>KindHeartKorner</p>
       </Link>
       <img onClick={dropdown_toggle} className='nav-dropdown' src={nav_dropdown} alt="" />
       <ul ref={menuRef} className="nav-menu">
-        <li onClick={()=>{setMenu("shop")}}><Link to='/' style={{ textDecoration: 'none' }}>Shop</Link>{menu==="shop"?<hr/>:<></>}</li>
-        <li onClick={()=>{setMenu("mens")}}><Link to='/mens' style={{ textDecoration: 'none' }}>Men</Link>{menu==="mens"?<hr/>:<></>}</li>
-        <li onClick={()=>{setMenu("womens")}}><Link to='/womens' style={{ textDecoration: 'none' }}>Women</Link>{menu==="womens"?<hr/>:<></>}</li>
-        <li onClick={()=>{setMenu("kids")}}><Link to='/kids' style={{ textDecoration: 'none' }}>Kids</Link>{menu==="kids"?<hr/>:<></>}</li>
+        <li onClick={()=>{setMenu("home")}}><Link to='/' style={{ textDecoration: 'none' }}>Home</Link>{menu==="home"?<hr/>:<></>}</li>
+        <li onClick={()=>{setMenu("shop")}}><Link to='/shop' style={{ textDecoration: 'none' }}>Shop</Link>{menu==="shop"?<hr/>:<></>}</li>
+        <li onClick={()=>{setMenu("about")}}><Link to='/about' style={{ textDecoration: 'none' }}>About</Link>{menu==="about"?<hr/>:<></>}</li>
+        <li onClick={()=>{setMenu("contact")}}><Link to='/contact' style={{ textDecoration: 'none' }}>Contact</Link>{menu==="contact"?<hr/>:<></>}</li>
       </ul>
       <div className="nav-login-cart">
         {localStorage.getItem('auth-token')
