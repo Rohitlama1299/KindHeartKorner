@@ -170,17 +170,11 @@ app.get("/allproducts", async (req, res) => {
     res.send(products);
 });
 
-app.get("/newcollections", async (req, res) => {
-	let products = await Product.find({});
-  let arr = products.slice(1).slice(-8);
-  console.log("New Collections");
-  res.send(arr);
-});
 
-app.get("/popularinwomen", async (req, res) => {
+app.get("/product for sale", async (req, res) => {
 	let products = await Product.find({});
   let arr = products.splice(0,  4);
-  console.log("Popular In Women");
+  console.log("Product for sale");
   res.send(arr);
 });
 
